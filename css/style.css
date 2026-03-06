@@ -80,8 +80,8 @@ img { max-width: 100%; display: block; }
 /* HERO */
 .hero-section { position: relative; width: 100%; overflow: hidden; min-height: 88vh; display: flex; align-items: flex-end; }
 .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1210 0%, #1c3530 60%, #0f1817 100%); }
-.hero-bg img { position: absolute; inset: 0; object-fit: cover; width: 100%; height: 100%; opacity: 0.28; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,18,16,0.96) 0%, rgba(10,18,16,0.45) 45%, rgba(10,18,16,0.15) 100%); }
+.hero-bg img { position: absolute; inset: 0; object-fit: cover; width: 100%; height: 100%; opacity: 0.72; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,18,16,0.88) 0%, rgba(10,18,16,0.35) 45%, rgba(10,18,16,0.08) 100%); }
 .hero-content { position: relative; padding: 0 60px 80px; max-width: 820px; }
 
 /* HERO WORDS */
@@ -279,4 +279,75 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════ MOBILE POLISH ═══════════════ */
+@media (max-width: 600px) {
+
+  /* Header */
+  .brand-name { font-size: 0.85rem; }
+  .brand-name span { font-size: 0.58rem; }
+  .header-logo-img { width: 38px; height: 38px; }
+
+  /* Hero */
+  .hero-content { padding: 0 20px 48px; }
+  .hero-word { font-size: clamp(2.8rem, 14vw, 4rem); }
+  .hero-section { min-height: 80vh; }
+
+  /* Sections */
+  .section { padding: 52px 0; }
+  .container { padding: 0 18px; }
+
+  /* Schedule grid — single column */
+  .schedule-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
+
+  /* Pillars — single column, tighter padding */
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar-cell { padding: 32px 24px; }
+
+  /* Partners — stacked */
+  .partners-row { flex-direction: column; align-items: center; }
+  .partner-card { max-width: 100%; width: 100%; }
+
+  /* Team couple card */
+  .couple-card { grid-template-columns: 1fr; }
+  .couple-img { height: 280px; }
+  .couple-info { padding: 24px 20px; }
+
+  /* Team grid — single column on small screens */
+  .team-grid { flex-direction: column; }
+  .team-card { max-width: 100%; min-width: unset; width: 100%; }
+  .team-img { height: 240px; }
+
+  /* Team section header */
+  .team-section-title { font-size: 1.4rem; }
+
+  /* Contact form */
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  .contact-form-wrap { padding: 24px 18px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-inner { padding: 40px 20px 24px; }
+  .site-footer { padding: 0; }
+  .footer-socials { flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+  /* Teach page CTA */
+  .cta-layout { grid-template-columns: 1fr !important; }
+
+  /* Buttons full width on small screens */
+  .btn { font-size: 0.74rem; padding: 12px 22px; }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+}
+
+/* Tablet tweaks */
+@media (min-width: 601px) and (max-width: 900px) {
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { flex-wrap: wrap; }
+  .team-card { min-width: 200px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  .couple-card { grid-template-columns: 280px 1fr; gap: 32px; }
+  .couple-img { height: 360px; }
 }
